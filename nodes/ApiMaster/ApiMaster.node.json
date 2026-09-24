@@ -1,0 +1,22 @@
+{
+  "node": "n8n-nodes-apimaster.apiMaster",
+  "nodeVersion": "1.0",
+  "codexVersion": "1.0",
+  "categories": ["AI"],
+  "subcategories": {
+    "AI": ["Miscellaneous"]
+  },
+  "alias": ["LLM", "OpenAI", "Chat", "Image", "Video", "Sora", "Gateway", "APIMaster"],
+  "resources": {
+    "credentialDocumentation": [
+      {
+        "url": "https://apimaster.ai/docs/getting-started/api-key"
+      }
+    ],
+    "primaryDocumentation": [
+      {
+        "url": "https://github.com/apimaster-ai/n8n-nodes-apimaster"
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "n8n-nodes-apimaster",
+  "version": "0.1.0",
+  "description": "n8n node for chat, image and video generation through APIMaster or any OpenAI-compatible gateway",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "apimaster",
+    "openai",
+    "llm",
+    "image-generation",
+    "video-generation"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/apimaster-ai/n8n-nodes-apimaster",
+  "author": {
+    "name": "APIMaster",
+    "email": "support@apimaster.ai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apimaster-ai/n8n-nodes-apimaster.git"
+  },
+  "engines": {
+    "node": ">=20.15"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "npx rimraf dist && tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint && node --test test/*.test.js",
+    "test": "npm run build && node --test test/*.test.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/ApiMasterApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/ApiMaster/ApiMaster.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "@typescript-eslint/parser": "^8.70.1",
+    "eslint": "^8.57.1",
+    "eslint-plugin-n8n-nodes-base": "^1.16.7",
+    "gulp": "^5.0.0",
+    "n8n-workflow": "^2.16.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
