@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-apimaster",
+  "name": "@apimaster/n8n-nodes-apimaster",
   "version": "0.1.0",
   "description": "n8n node for chat, image and video generation through APIMaster or any OpenAI-compatible gateway",
   "keywords": [

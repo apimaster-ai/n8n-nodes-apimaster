@@ -17,13 +17,13 @@ Follow the
 **Settings → Community Nodes → Install**, then enter:
 
 ```
-n8n-nodes-apimaster
+@apimaster/n8n-nodes-apimaster
 ```
 
 Self-hosted with npm:
 
 ```bash
-npm install n8n-nodes-apimaster
+npm install @apimaster/n8n-nodes-apimaster
 ```
 
 ## Operations
