@@ -35,7 +35,8 @@
     "test": "npm run build && node --test test/node.test.js"
   },
   "files": [
-    "dist"
+    "dist/nodes",
+    "dist/credentials"
   ],
   "n8n": {
     "n8nNodesApiVersion": 1,
