@@ -22,7 +22,7 @@
     "url": "git+https://github.com/apimaster-ai/n8n-nodes-apimaster.git"
   },
   "engines": {
-    "node": ">=20.15"
+    "node": ">=22.16"
   },
   "main": "index.js",
   "scripts": {
@@ -31,8 +31,8 @@
     "format": "prettier nodes credentials --write",
     "lint": "eslint nodes credentials package.json",
     "lintfix": "eslint nodes credentials package.json --fix",
-    "prepublishOnly": "npm run build && npm run lint && node --test test/*.test.js",
-    "test": "npm run build && node --test test/*.test.js"
+    "prepublishOnly": "npm run build && npm run lint && node --test test/node.test.js",
+    "test": "npm run build && node --test test/node.test.js"
   },
   "files": [
     "dist"

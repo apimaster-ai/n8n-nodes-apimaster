@@ -8,8 +8,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        node: ['20', '22']
+        # n8n 2.x requires Node >= 22.16; a community node never runs on anything older,
+        # and n8n-workflow's isolated-vm dependency does not build on Node 20.
+        node: ['22']
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -22,6 +25,6 @@ jobs:
       - name: Lint with the n8n community ruleset
         run: npm run lint
       - name: Structural tests
-        run: node --test test/*.test.js
+        run: node --test test/node.test.js
       - name: Icon reached dist
         run: test -f dist/nodes/ApiMaster/apiMaster.svg
